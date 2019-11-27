@@ -38,7 +38,7 @@ public class Config {
     @Bean
     MessageConverter filmReturnedEventConverter(final ObjectMapper objectMapper) {
         final Map<String, Class<?>> t = new HashMap<>();
-        t.put("FilmReturnedEvent", FilmReturnedEvent.class);
+        t.put("com.divae.sk.springboot2.receiver.film.FilmReturnedEvent", FilmReturnedEvent.class);
 
         final DefaultJackson2JavaTypeMapper typeMapper = new DefaultJackson2JavaTypeMapper();
         typeMapper.setIdClassMapping(t);

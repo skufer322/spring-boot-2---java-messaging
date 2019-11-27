@@ -13,7 +13,7 @@ public class ReturnFilmController {
     private final AmqpTemplate amqpTemplate;
 
     @GetMapping("/return-film")
-    public String returnFilm(){
+    public String returnFilm() {
         FilmReturnedEvent film = filmService.getReturnedFilm();
         amqpTemplate.convertAndSend("returned-film-events", film);
         return "Film " + film + " was returned!";
