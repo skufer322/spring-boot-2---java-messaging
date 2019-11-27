@@ -5,7 +5,8 @@ import lombok.Value;
 
 @Value
 @RequiredArgsConstructor
-public class FilmReturnedEvent {
+public
+class FilmReturnedEvent {
 
     String title;
 }

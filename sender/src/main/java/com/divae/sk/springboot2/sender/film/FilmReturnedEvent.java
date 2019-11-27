@@ -9,7 +9,6 @@ import java.io.Serializable;
 @Value
 @RequiredArgsConstructor
 @Builder(toBuilder = true)
-public
 class FilmReturnedEvent implements Serializable {
 
     String inventoryId;

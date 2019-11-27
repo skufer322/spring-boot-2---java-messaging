@@ -7,7 +7,7 @@ import java.util.UUID;
 @Component
 public class FilmService {
 
-    FilmReturnedEvent getReturnedFilm() {
+    FilmReturnedEvent getReturnedFilm(){
         return FilmReturnedEvent.builder()
                 .inventoryId(UUID.randomUUID().toString())
                 .title("Das große Fressen")
