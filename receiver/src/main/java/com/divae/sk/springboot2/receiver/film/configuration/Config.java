@@ -12,10 +12,12 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.boot.jackson.JsonComponentModule;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Configuration
 public class Config {
 
     @Bean
@@ -38,13 +40,15 @@ public class Config {
     @Bean
     MessageConverter filmReturnedEventConverter(final ObjectMapper objectMapper) {
         final Map<String, Class<?>> t = new HashMap<>();
-        t.put("com.divae.sk.springboot2.receiver.film.FilmReturnedEvent", FilmReturnedEvent.class);
+        t.put("com.divae.sk.springboot2.sender.film.FilmReturnedEvent", FilmReturnedEvent.class);
 
         final DefaultJackson2JavaTypeMapper typeMapper = new DefaultJackson2JavaTypeMapper();
         typeMapper.setIdClassMapping(t);
+        typeMapper.setTrustedPackages("com.divae.sk.springboot2.sender.film");
 
         final Jackson2JsonMessageConverter converter = new Jackson2JsonMessageConverter(objectMapper);
         converter.setJavaTypeMapper(typeMapper);
+
         return converter;
     }
 
