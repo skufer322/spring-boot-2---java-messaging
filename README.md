@@ -8,4 +8,6 @@
     * Queue
     * MessageConverter (Default: Java-Serialisierung genutzt -> schwierig wg. Cross-Plattform-Kompatibilität => kann aber angepasst werden, z.B. Jackson2JsonMessageConverter)
     * RabbitListenerConfigurer
-* Nachrichten nicht direkt über Queue und Topic verschickt, sondern über Exchange -> Routing nicht mehr an eigentlichen Nachrichtentransport gekoppelt (s. a. https://medium.com/faun/different-types-of-rabbitmq-exchanges-9fefd740505d)
+* Nachrichten nicht direkt über Queue und Topic verschickt, sondern über Exchange -> Routing nicht mehr an eigentlichen Nachrichtentransport gekoppelt 
+    * vier Arten von Exchanges: Direct, Fanout, Topic, Header
+    * s. a. https://medium.com/faun/different-types-of-rabbitmq-exchanges-9fefd740505d
