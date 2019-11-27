@@ -1,6 +1,6 @@
 # Spring Boot 2 - Java Messaging
 
-* docker-compose up im Verzeichnis von docker-compose.yml aufrufen.
+* docker-compose up im Verzeichnis von docker-compose.yml aufrufen, oder: docker run -d --rm -p 5672:5672 -p 15672:15672 --name='rabbitmq' rabbitmq:management
 * RabbitMQ console: http://localhost:15672/ (user: guest, password: guest)
 * AmqpAdmin zur Konfiguration der Queues und anderem
 * AmqpTemplate = Interface, RabbitTemplate die Implementierung davon
