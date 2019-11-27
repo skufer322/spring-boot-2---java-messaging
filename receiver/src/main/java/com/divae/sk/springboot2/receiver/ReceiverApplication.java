@@ -1,4 +1,4 @@
-package com.divae.sk.sprintboot2.receiver;
+package com.divae.sk.springboot2.receiver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
